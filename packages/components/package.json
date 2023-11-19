@@ -1,0 +1,12 @@
+{
+  "name": "@mw-cli/components",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "echo \"Hello App2\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
