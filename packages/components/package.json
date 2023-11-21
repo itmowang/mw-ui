@@ -5,17 +5,18 @@
   "type": "module",
   "types": "./dist/mw-ui.d.ts",
   "scripts": {
-    "csswatch": "npx tailwindcss  -o ./dist/mw-ui.css --watch",
-    "build": "vite build && npx tailwindcss  -o ./dist/mw-ui.css"
+    "csswatch": "npx tailwindcss -o ./dist/mw-ui.css --watch",
+    "build": "vite build && npx tailwindcss -o ./dist/mw-ui.css"
   },
+  "postcss": "postcss.config.cjs",
   "exports": {
     ".": {
       "import": "./dist/mw-ui.js",
       "require": "./dist/mw-ui.umd.js"
     },
-    "./dist/mw-ui.css":{
-      "import":"./dist/mw-ui.css",
-      "require":"./dist/mw-ui.css"
+    "./dist/mw-ui.css": {
+      "import": "./dist/mw-ui.css",
+      "require": "./dist/mw-ui.css"
     }
   },
   "keywords": [],
@@ -24,6 +25,7 @@
   "devDependencies": {
     "@types/node": "^20.9.2",
     "path": "^0.12.7",
+    "postcss-prefixwrap": "^1.42.0",
     "tailwind": "^4.0.0",
     "vite": "^5.0.0",
     "vite-plugin-dts": "^3.6.3"
