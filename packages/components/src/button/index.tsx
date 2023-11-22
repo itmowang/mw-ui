@@ -1,27 +1,43 @@
-import React, { ReactNode, ButtonHTMLAttributes } from "react";
+import React, { ReactNode } from "react";
 
-interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+/**
+ * @name 
+ * @param {ReactNode} children
+ */
+
+interface ButtonProps  {
   children: ReactNode;
-  variant?: "primary" | "secondary";
+  type?: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
-  variant = "primary",
+  type = "primary",
   ...rest
 }) => {
+  
   const getVariantStyles = () => {
-    switch (variant) {
+    switch (type) {
+      case "primary":
+        return "bg-primary text-white";
       case "secondary":
-        return "bg-gray-500 text-white";
+        return "bg-secondary text-white";
+      case "success":
+        return "bg-success text-white";
+      case "info":
+        return "bg-info text-white";
+      case "warning":
+        return "bg-warning text-white";
+      case "danger":
+        return "bg-danger text-white";
       default:
-        return "bg-blue-500 text-white";
+        return "bg-default text-white";
     }
   };
 
   return (
     <button
-      className={`py-2 px-4 rounded ${getVariantStyles()} hover:bg-opacity-75 focus:outline-none focus:ring focus:border-blue-300`}
+      className={`py-2 px-4 rounded  ${getVariantStyles()} hover:bg-opacity-75 focus:outline-none focus:ring focus:border-blue-300`}
       {...rest}
     >
       {children}

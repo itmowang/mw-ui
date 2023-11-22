@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <div className="main">
-    <Button>Button</Button>
+    <Button type="warning">Button</Button>
   </div>
 );
