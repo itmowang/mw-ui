@@ -6,7 +6,12 @@
   "types": "./dist/mw-ui.d.ts",
   "scripts": {
     "csswatch": "tailwindcss -o ./dist/mw-ui.css --watch",
-    "build": "vite build && npx tailwindcss -o ./dist/mw-ui.css"
+    "build": "vite build && npx tailwindcss -o ./dist/mw-ui.css",
+    "publish":"npm publish --access public"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
   },
   "exports": {
     ".": {

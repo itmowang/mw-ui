@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-us" class="initial">
+  <head>
+    <!-- Global Metadata --><meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="alternate icon" type="image/x-icon" href="/favicon.ico">
+
+<link rel="sitemap" href="/sitemap.xml">
+
+<!-- Preload Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital@0;1&display=swap" rel="stylesheet">
+
+<!-- Scrollable a11y code helper -->
+<script src="/make-scrollable-code-focusable.js"></script>
+
+<!-- This is intentionally inlined to avoid FOUC -->
+<script>
+  const root = document.documentElement;
+  const theme = localStorage.getItem("theme");
+  if (
+    theme === "dark" ||
+    (!theme && window.matchMedia("(prefers-color-scheme: dark)").matches)
+  ) {
+    root.classList.add("dark");
+  } else {
+    root.classList.remove("dark");
+  }
+</script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=" is:inline></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '');
+</script> -->
+
+    <!-- <HeadSEO {content} canonicalURL={Astro.canonicalURL} site="" /> -->
+    <title>
+      MW-UI
+    </title>
+  <link rel="stylesheet" href="/assets/buttons.3d79797d.css" />
+<link rel="stylesheet" href="/assets/buttons.15251ce7.css" /></head>
+
+  <body class="bg-slate-100">
+    <div class="sticky top-0 z-10 w-full">
+      <header class="p-3 bg-slate-100 bg-opacity-80 backdrop-blur-md border-b text-slate-900">
+	<a href="#article" class="sr-only focus:not-sr-only skiplink"><span>Skip to Content</span></a>
+	<nav title="Top Navigation" class="max-w-7xl mx-auto flex justify-between items-center px-4">
+		<div>
+			<a class="text-lg font-medium" href="/">
+				<h1>
+					MW-UI
+				</h1>
+			</a>
+		</div>
+		<div class="flex gap-2">
+		
+		<!-- <button onclick="toggleDarkMode()">theme</button> -->
+		<a title="Twitter" class="opacity-90 hover:opacity-100 hover:bg-blue-100 p-2 rounded-full transition-colors" href="https://twitter.com/@mowang">
+				<img class="h-7" src="/twitter.svg" alt="twitter logo">
+			</a>
+		<a title="Github" class="opacity-80 hover:opacity-100 hover:bg-slate-200 p-2 rounded-full transition-colors" href="https://github.com/itmowang/mw-ui">
+				<img class="h-7" src="/github.svg" alt="github logo">
+			</a>
+		<a title="linkedin" class="opacity-80 hover:opacity-100 hover:bg-blue-50 p-2 rounded-full transition-colors" href="https://linkedin.com/in/mowang">
+				<img class="h-7" src="/linkedin.svg" alt="linkedin logo">
+			</a>
+		</div>
+	</nav>
+</header>
+
+<script>
+	// function toggleDarkMode() {
+	// 	const body = document.body;
+	// 	body.classList.toggle('dark');
+	// 	console.log('dark mode toggled');
+	// }
+</script>
+    </div>
+    <div class="grid grid-cols-12">
+      <div class="col-span-3 sticky top-0 pt-12 h-screen flex">
+        <div class="ml-auto">
+          <aside title="Site Navigation">
+	<!-- <Debug content={navigation} /> -->
+	<nav aria-labelledby="grid-left" class="w-64 p-4 border-r">
+		<ul>
+			<h2 class="mt-4 font-semibold text-slate-700">Core</h2><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/core/introduction">Introduction</a>
+				</li><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/core/colors">Colors</a>
+				</li><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/core/typography">Typography</a>
+				</li><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/core/shadows">Shadows</a>
+				</li><h2 class="mt-4 font-semibold text-slate-700">Components</h2><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/components/buttons">Buttons</a>
+				</li><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/components/input">Input</a>
+				</li><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/components/status-pill">Status pills</a>
+				</li><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/components/table">Table</a>
+				</li><h2 class="mt-4 font-semibold text-slate-700">Patterns</h2><li class="block py-2 px-6  my-1 transition-colors border-l hover:border-slate-400 text-slate-500 hover:text-slate-900">
+					<a href="/patterns/introduction">Introduction</a>
+				</li>
+		</ul>
+	</nav>
+</aside>
+
+<script>
+	window.addEventListener('DOMContentLoaded', (event) => {
+		var target = document.querySelector('[aria-current="page"]');
+		if (target && target.offsetTop > window.innerHeight - 100) {
+			document.querySelector('.nav-groups').scrollTop = target.offsetTop;
+		}
+	});
+</script>
+        </div>
+      </div>
+      <main class="py-4 px-8 pb-32 col-span-6 overflow-auto">
+        <div>
+          <article id="article" class="content">
+	<section class="main-section">
+		<nav class="block sm:hidden">
+		</nav>
+		<h1>Colors</h1>
+<maincolors></maincolors>
+	</section>
+</article>
+        </div>
+      </main>
+      <div class="col-span-3 sticky top-0 h-screen flex">
+        <nav aria-labelledby="grid-right">
+	<div class="px-8">
+		<ul class="flex flex-col gap-4 mt-24">
+	
+</ul>
+	</div>
+</nav>
+      </div>
+    </div>
+  </body></html>
