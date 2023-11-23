@@ -1,7 +1,7 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Button } from "@mw-ui/components";
-import "@mw-ui/components/dist/mw-ui.css";
+import { Button } from "@damw-ui/ui";
+import "@damw-ui/ui/dist/mw-ui.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

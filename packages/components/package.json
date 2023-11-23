@@ -1,5 +1,5 @@
 {
-  "name": "@mw-ui/components",
+  "name": "@damw-ui/ui",
   "version": "0.0.1",
   "description": "",
   "type": "module",
@@ -7,7 +7,8 @@
   "scripts": {
     "csswatch": "tailwindcss -o ./dist/mw-ui.css --watch",
     "build": "vite build && npx tailwindcss -o ./dist/mw-ui.css",
-    "publish":"npm publish --access public"
+    "publish": "npm publish --access public",
+    "test:ui": "npx vitest --ui"
   },
   "publishConfig": {
     "registry": "https://registry.npmjs.org/",
@@ -28,13 +29,16 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^20.9.2",
+    "@vitest/ui": "^0.34.6",
     "autoprefixer": "^10.4.16",
     "path": "^0.12.7",
     "tailwindcss": "^3.3.5",
     "vite": "^5.0.0",
-    "vite-plugin-dts": "^3.6.3"
+    "vite-plugin-dts": "^3.6.3",
+    "vitest": "^0.34.6"
   },
   "dependencies": {
+    "@damw-ui/ui": "workspace:^",
     "@types/react": "^18.2.37",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "postcss": "^8.4.31",
