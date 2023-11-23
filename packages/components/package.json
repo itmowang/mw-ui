@@ -8,7 +8,6 @@
     "csswatch": "tailwindcss -o ./dist/mw-ui.css --watch",
     "build": "vite build && npx tailwindcss -o ./dist/mw-ui.css",
     "publish": "npm publish --access public",
-    "test:ui": "npx vitest --ui",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o ../../docs"
   },
