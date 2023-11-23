@@ -1,29 +1,130 @@
 <!DOCTYPE html>
-<link rel="stylesheet" href="/assets/buttons.3d79797d.css" /><div class="bg-slate-100 min-h-screen text-center">
-  <header class="pt-12 pb-24 px-4 bg-gradient-to-br from-slate-700 to-black">
-    <div class="flex items-center justify-center p-4">
-      <img src="/astro-design-system-logo.svg" alt="MW-UI">
-    </div>
-    <h1 class="text-white text-4xl font-medium drop-shadow-sm">MW-UI</h1>
-    <p class="text-lg mt-4 text-slate-300">mw-ui 一套由tailwind开发的组件库.</p>
-  </header>
-  <nav>
-    <ul class="flex gap-4 max-w-5xl mx-auto text-left mt-12">
-      <a href="/core/introduction" class="flex flex-col bg-white rounded-md hover:-translate-y-1 hover:shadow-lg transition-all flex-1 items-center p-4">
-            <img src="/Core.jpg" alt="Core">
-            <h2 class="text-lg font-medium">Core</h2>
-            <p class="text-slate-500">Base colors, typography, shadows, and more.</p>
-          </a><a href="/components/buttons" class="flex flex-col bg-white rounded-md hover:-translate-y-1 hover:shadow-lg transition-all flex-1 items-center p-4">
-            <img src="/Components.jpg" alt="Components">
-            <h2 class="text-lg font-medium">Components</h2>
-            <p class="text-slate-500">The building blocks for our UI.</p>
-          </a><a href="/patterns/introduction" class="flex flex-col bg-white rounded-md hover:-translate-y-1 hover:shadow-lg transition-all flex-1 items-center p-4">
-            <img src="/Patterns.jpg" alt="Patterns">
-            <h2 class="text-lg font-medium">Patterns</h2>
-            <p class="text-slate-500">Common patterns for building interfaces.</p>
-          </a>
-    </ul>
-  </nav>
-</div>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
 
-<script></script>
+    <title>@storybook/cli - Storybook</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    
+    <link
+      rel="prefetch"
+      href="./sb-common-assets/nunito-sans-regular.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="prefetch"
+      href="./sb-common-assets/nunito-sans-bold.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link rel="stylesheet" href="./sb-common-assets/fonts.css" />
+
+    <link href="./sb-manager/runtime.js" rel="modulepreload" />
+
+    
+    <link href="./sb-addons/links-0/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-controls-1/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-actions-2/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-backgrounds-3/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-viewport-4/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-toolbars-5/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-measure-6/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/essentials-outline-7/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/onboarding-8/manager-bundle.js" rel="modulepreload" />
+    
+    <link href="./sb-addons/interactions-9/manager-bundle.js" rel="modulepreload" />
+       
+
+    <style>
+      #storybook-root[hidden] {
+        display: none !important;
+      }
+    </style>
+
+    
+  </head>
+  <body>
+    <div id="root"></div>
+
+    
+    <script>
+      
+        
+          window['FEATURES'] = {
+  "warnOnLegacyHierarchySeparator": true,
+  "buildStoriesJson": false,
+  "storyStoreV7": true,
+  "argTypeTargetsV7": true,
+  "legacyDecoratorFileOrder": false
+};
+        
+      
+        
+          window['REFS'] = {};
+        
+      
+        
+          window['LOGLEVEL'] = "info";
+        
+      
+        
+          window['DOCS_OPTIONS'] = {
+  "defaultName": "Docs",
+  "autodocs": "tag"
+};
+        
+      
+        
+          window['CONFIG_TYPE'] = "PRODUCTION";
+        
+      
+        
+      
+        
+      
+    </script>
+    
+
+    <script type="module">
+      import './sb-manager/runtime.js';
+
+      
+      import './sb-addons/links-0/manager-bundle.js';
+      
+      import './sb-addons/essentials-controls-1/manager-bundle.js';
+      
+      import './sb-addons/essentials-actions-2/manager-bundle.js';
+      
+      import './sb-addons/essentials-backgrounds-3/manager-bundle.js';
+      
+      import './sb-addons/essentials-viewport-4/manager-bundle.js';
+      
+      import './sb-addons/essentials-toolbars-5/manager-bundle.js';
+      
+      import './sb-addons/essentials-measure-6/manager-bundle.js';
+      
+      import './sb-addons/essentials-outline-7/manager-bundle.js';
+      
+      import './sb-addons/onboarding-8/manager-bundle.js';
+      
+      import './sb-addons/interactions-9/manager-bundle.js';
+      
+    </script>
+
+    <link href="./sb-preview/runtime.js" rel="prefetch" as="script" />
+  </body>
+</html>
