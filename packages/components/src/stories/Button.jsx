@@ -1,7 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
-import Bsutton from "../button";
-import "../../dist/mw-ui.css";
+import { Button as Bsutton} from "@damw-ui/ui";
+import "@damw-ui/ui/dist/mw-ui.css";
 /**
  * Primary UI component for user interaction
  */
