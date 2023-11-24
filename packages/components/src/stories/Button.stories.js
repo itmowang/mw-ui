@@ -19,12 +19,16 @@ export default {
   args: {
     children: "Button",
     type: "success",
+    size:"default",
+    disabled: false,
   },
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Size = {
-  args: {},
+  args: {
+    size: "default",
+  },
 };
 
 export const Type = {
@@ -34,7 +38,9 @@ export const Type = {
 };
 
 export const Disabled = {
-  args: {},
+  args: {
+    disabled: false,
+  },
 };
 
 export const IconButton = {

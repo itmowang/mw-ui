@@ -9,14 +9,19 @@ interface ButtonProps {
   children: ReactNode;
   type?: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
   size?: "default" | "small" | "large";
+  disabled?: boolean;
+  onClick?: () => void;
 }
 
 const Button: React.FC<ButtonProps> = ({
   children,
   type = "primary",
   size = "default",
+  disabled = false,
+  onClick,
   ...rest
 }) => {
+
   const getVariantStyles = () => {
     switch (type) {
       case "primary":
@@ -50,9 +55,19 @@ const Button: React.FC<ButtonProps> = ({
     }
   };
 
+ // disabled
+ const getDisabledStyle = () => {
+  if (disabled) {
+    return "bg-gray-300 cursor-not-allowed opacity-70 ";
+  }
+  return "";
+ }
+
   return (
     <button
-      className={` ${getSizeStyle()}   ${getVariantStyles()}  rounded hover:bg-opacity-75 focus:outline-none focus:ring focus:border-blue-300`}
+      className={` ${getSizeStyle()}  ${getVariantStyles()} ${getDisabledStyle()} rounded hover:bg-opacity-75 focus:outline-none focus:ring focus:border-blue-300`}
+      disabled={disabled}
+      onClick={() => { disabled ? null : onClick }}
       {...rest}
     >
       {children}
