@@ -10,6 +10,7 @@ interface ButtonProps {
   type?: "primary" | "secondary" | "success" | "info" | "warning" | "danger";
   size?: "default" | "small" | "large";
   disabled?: boolean;
+  link?: boolean;
   onClick?: () => void;
 }
 
@@ -18,10 +19,10 @@ const Button: React.FC<ButtonProps> = ({
   type = "primary",
   size = "default",
   disabled = false,
+  link = false,
   onClick,
   ...rest
 }) => {
-
   const getVariantStyles = () => {
     switch (type) {
       case "primary":
@@ -55,19 +56,50 @@ const Button: React.FC<ButtonProps> = ({
     }
   };
 
- // disabled
- const getDisabledStyle = () => {
-  if (disabled) {
-    return "bg-gray-300 cursor-not-allowed opacity-70 ";
-  }
-  return "";
- }
+  const getLinkColor = () => {
+    switch (type) {
+      case "primary":
+        return "text-primary";
+      case "secondary":
+        return "text-secondary";
+      case "success":
+        return "text-success";
+      case "info":
+        return "text-info";
+      case "warning":
+        return "text-warning";
+      case "danger":
+        return "text-danger";
+      default:
+        return "text-default";
+    }
+  };
 
-  return (
+  // disabled
+  const getDisabledStyle = () => {
+    if (disabled) {
+      return "bg-gray-300 cursor-not-allowed opacity-70 ";
+    }
+    return "";
+  };
+
+  return link ? (
+    <div
+      className={`${getLinkColor()}  cursor-pointer`}
+      onClick={() => {
+        disabled ? null : onClick;
+      }}
+    >
+      {" "}
+      {children}
+    </div>
+  ) : (
     <button
       className={` ${getSizeStyle()}  ${getVariantStyles()} ${getDisabledStyle()} rounded hover:bg-opacity-75 focus:outline-none focus:ring focus:border-blue-300`}
       disabled={disabled}
-      onClick={() => { disabled ? null : onClick }}
+      onClick={() => {
+        disabled ? null : onClick;
+      }}
       {...rest}
     >
       {children}

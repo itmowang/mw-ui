@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@damw-ui/ui": "workspace:^",
+    "@icon-park/react": "^1.4.2",
     "@types/react": "^18.2.38",
     "@vitejs/plugin-react-swc": "^3.5.0",
     "postcss": "^8.4.31",

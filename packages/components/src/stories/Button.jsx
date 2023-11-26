@@ -7,6 +7,7 @@ import "@damw-ui/ui/dist/mw-ui.css";
  * Primary UI component for user interaction123
  */
 export const Button = ({ children, ...props}) => { 
+  console.log(props);
   return <Bsutton {...props}>{children}</Bsutton>;
 };
 
@@ -25,12 +26,14 @@ Button.propTypes = {
     "small",
     "large",
   ],).isRequired,
-  disabled:PropTypes.bool
+  disabled:PropTypes.bool,
+  link:PropTypes.bool
 };
 
 Button.defaultProps = { 
   children: "Button",
   type:"primary",
   size:"default",
-  disabled:false
+  disabled:false,
+  link:true
 };

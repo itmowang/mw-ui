@@ -19,8 +19,9 @@ export default {
   args: {
     children: "Button",
     type: "success",
-    size:"default",
+    size: "default",
     disabled: false,
+    link: false,
   },
 };
 
@@ -39,7 +40,7 @@ export const Type = {
 
 export const Disabled = {
   args: {
-    disabled: false,
+    disabled: true,
   },
 };
 
@@ -48,5 +49,7 @@ export const IconButton = {
 };
 
 export const TextButton = {
-  args: {},
+  args: {
+    link: true,
+  },
 };
