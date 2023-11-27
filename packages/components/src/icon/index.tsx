@@ -1,8 +1,5 @@
 import React from "react";
-import * as allIcon from "@icon-park/react";
-
-// Replace the scriptUrl with your IconPark script URL
-const scriptUrl = "//at.alicdn.com/t/font_1234567abcdef.js";
+import "material-icons/iconfont/material-icons.css";
 
 interface IconProps {
   icon: string;
@@ -11,8 +8,25 @@ interface IconProps {
   className?: string;
 }
 
-const Icon: React.FC<IconProps> = ({ icon, ...props }) => {
-  return <div> <allIcon.Home theme="filled" /></div>;
+const Icon: React.FC<IconProps> = ({
+  icon,
+  size = 24,
+  color = "black",
+  className = "",
+  ...props
+}) => {
+  const iconClassName = `material-icons ${className}`;
+
+  const style = {
+    fontSize: `${size}px`,
+    color: color,
+  };
+
+  return (
+    <span className={iconClassName} style={style} {...props}>
+      {icon}
+    </span>
+  );
 };
 
 export default Icon;

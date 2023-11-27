@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <div className="main">
-     <Icon icon="Home"/>
+    <Icon icon="bedtime" />
   </div>
 );

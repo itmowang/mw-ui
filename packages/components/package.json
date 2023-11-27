@@ -5,8 +5,8 @@
   "type": "module",
   "types": "./dist/mw-ui.d.ts",
   "scripts": {
-    "csswatch": "tailwindcss -o ./dist/mw-ui.css --watch",
-    "build": "vite build && npx tailwindcss -o ./dist/mw-ui.css",
+    "csswatch": "tailwindcss -o ./styles/mw-ui.css --watch",
+    "build": "npx tailwindcss -o ./styles/mw-ui.css && vite build ",
     "publish": "npm publish --access public",
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build -o ../../docs"
@@ -21,10 +21,10 @@
       "require": "./dist/mw-ui.umd.js"
     },
     "./dist/mw-ui.css": {
-      "import": "./dist/mw-ui.css",
-      "require": "./dist/mw-ui.css"
+      "import": "./dist/style.css",
+      "require": "./dist/style.css"
     }
-  }, 
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -51,9 +51,9 @@
   },
   "dependencies": {
     "@damw-ui/ui": "workspace:^",
-    "@icon-park/react": "^1.4.2",
     "@types/react": "^18.2.38",
     "@vitejs/plugin-react-swc": "^3.5.0",
+    "material-icons": "^1.13.12",
     "postcss": "^8.4.31",
     "react": "^18.2.0"
   }

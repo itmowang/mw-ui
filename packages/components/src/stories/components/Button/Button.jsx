@@ -7,7 +7,6 @@ import "@damw-ui/ui/dist/mw-ui.css";
  * Primary UI component for user interaction123
  */
 export const Button = ({ children, ...props}) => { 
-  console.log(props);
   return <Bsutton {...props}>{children}</Bsutton>;
 };
 

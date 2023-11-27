@@ -12,35 +12,32 @@ export default {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    icon: { control: "text" },
+    // icon: { control: "text" },
+    color: { control: "color" },
   },
+  args: {
+    icon: "Home",
+    size: 24,
+  },
+};
+
+// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
+export const icon = {
   args: {
     icon: "Home",
   },
 };
 
-
-// More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Size = {
+export const size = {
   args: {
+    size: 80,
+    icon: "Home",
   },
 };
 
-export const Type = {
+export const color = {
   args: {
-  },
-};
-
-export const Disabled = {
-  args: {
-  },
-};
-
-export const IconButton = {
-  args: {},
-};
-
-export const TextButton = {
-  args: {
+    icon: "Home",
+    color: "#1bc2ee",
   },
 };
