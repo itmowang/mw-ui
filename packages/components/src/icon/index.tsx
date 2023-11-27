@@ -1,31 +1,18 @@
 import React from "react";
-import { createFromIconfontCN } from "@icon-park/react";
+import * as allIcon from "@icon-park/react";
 
 // Replace the scriptUrl with your IconPark script URL
 const scriptUrl = "//at.alicdn.com/t/font_1234567abcdef.js";
 
-const IconFont = createFromIconfontCN({
-  scriptUrl,
-});
+interface IconProps {
+  icon: string;
+  size?: number;
+  color?: string;
+  className?: string;
+}
 
-const Icon = ({
-  type,
-  size = 24,
-  color = "currentColor",
-  className,
-  ...rest
-}) => {
-  const iconClasses = `inline-block align-middle ${className || ""}`;
-
-  return (
-    <IconFont
-      type={type}
-      size={size}
-      fill={color}
-      className={iconClasses}
-      {...rest}
-    />
-  );
+const Icon: React.FC<IconProps> = ({ icon, ...props }) => {
+  return <div> <allIcon.Home theme="filled" /></div>;
 };
 
 export default Icon;

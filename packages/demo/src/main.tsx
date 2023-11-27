@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Button } from "@damw-ui/ui";
+import { Icon } from "@damw-ui/ui";
 import "@damw-ui/ui/dist/mw-ui.css";
 
 const root = ReactDOM.createRoot(
@@ -9,6 +9,6 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <div className="main">
-    <Button type="warning">Button</Button>
+     <Icon icon="Home"/>
   </div>
 );

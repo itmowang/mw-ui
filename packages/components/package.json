@@ -24,7 +24,7 @@
       "import": "./dist/mw-ui.css",
       "require": "./dist/mw-ui.css"
     }
-  },
+  }, 
   "keywords": [],
   "author": "",
   "license": "ISC",
