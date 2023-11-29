@@ -14,22 +14,10 @@ export default {
   argTypes: {
     // icon: { control: "text" },
   },
-  args: {
-  },
+  args: {},
 };
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const icon = {
-  args: {
-  },
-};
-
-export const size = {
-  args: {
-  },
-};
-
-export const color = {
-  args: {
-  },
+  args: {},
 };

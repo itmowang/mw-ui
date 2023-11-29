@@ -1,9 +1,9 @@
 // Alert.tsx
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface AlertProps {
   type: 'success' | 'error' | 'warning' | 'info';
-  message: string;
+  message: ReactNode;
 }
 
 const Alert: React.FC<AlertProps> = ({ type, message }) => {

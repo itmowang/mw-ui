@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { Icon } from "@damw-ui/ui";
+import { Icon, Modal } from "@damw-ui/ui";
 import "@damw-ui/ui/dist/mw-ui.css";
 
 const root = ReactDOM.createRoot(
@@ -9,6 +9,9 @@ const root = ReactDOM.createRoot(
 
 root.render(
   <div className="main">
-    <Icon icon="bedtime" />
+    <Modal isOpen={true} onClose={function (): void {}}>
+      2234
+    </Modal>
+    <Icon icon="bedtime" onClick={() => {}} />
   </div>
 );
