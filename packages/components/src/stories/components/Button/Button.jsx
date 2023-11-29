@@ -10,6 +10,17 @@ export const Button = ({ children, ...props}) => {
   return <Bsutton {...props}>{children}</Bsutton>;
 };
 
+export const AllButton = () =>{
+  return <>
+    <Bsutton type="primary">Button</Bsutton>
+    <Bsutton type="secondary">Button</Bsutton>
+    <Bsutton type="success">Button</Bsutton>
+    <Bsutton type="info">Button</Bsutton>
+    <Bsutton type="warning">Button</Bsutton>
+    <Bsutton type="danger">Button</Bsutton>
+  </>
+}
+
 Button.propTypes = {
   children: PropTypes.string.isRequired,
   type: PropTypes.oneOf([

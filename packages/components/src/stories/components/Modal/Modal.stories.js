@@ -1,9 +1,9 @@
-import { Button,AllButton } from "./Button";
+import { Modal } from "./Modal";
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 export default {
-  title: "Components/Button",
-  component: Button,
+  title: "Components/Modal",
+  component: Modal,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: "centered",
@@ -12,49 +12,24 @@ export default {
   tags: ["autodocs"],
   // More on argTypes: https://storybook.js.org/docs/react/api/argtypes
   argTypes: {
-    children: { control: "text" },
-    type: { control: "select" },
-    size: { control: "inline-radio" },
+    // icon: { control: "text" },
   },
   args: {
-    children: "Button",
-    type: "success",
-    size: "default",
-    disabled: false,
-    link: false,
   },
 };
-
-export const All ={
-  title: "Components/AllButton",
-  component: AllButton,
-}
 
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
-export const Size = {
+export const icon = {
   args: {
-    size: "default",
   },
 };
 
-export const Type = {
+export const size = {
   args: {
-    type: "danger",
   },
 };
 
-export const Disabled = {
+export const color = {
   args: {
-    disabled: true,
-  },
-};
-
-export const IconButton = {
-  args: {},
-};
-
-export const TextButton = {
-  args: {
-    link: true,
   },
 };
