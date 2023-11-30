@@ -2,13 +2,16 @@
 import React, { ReactNode } from 'react';
 
 interface ColProps {
-    children: ReactNode;
-    span?: number;
-  }
-  
-  const Col: React.FC<ColProps> = ({ children, span = 24 }) => {
-    const widthClass = `w-${(span / 2)}/12`;
-  
-    return <div className={`p-2 ${widthClass}`}>{children}</div>;
-  };
+  span: number;
+  children: ReactNode;
+}
+
+const Col: React.FC<ColProps> = ({ span, children }) => {
+  const customClass = `basis-${span / 2}/12`; // 生成自定义 class 名称
+
+  return (
+    <div className={`flex ${customClass}`}>{children}</div>
+  );
+};
+
 export default Col;

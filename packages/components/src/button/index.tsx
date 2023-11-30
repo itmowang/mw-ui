@@ -98,7 +98,10 @@ const Button: React.FC<ButtonProps> = ({
       className={` ${getSizeStyle()}  ${getVariantStyles()} ${getDisabledStyle()} rounded hover:bg-opacity-75 focus:outline-none focus:ring focus:border-blue-300`}
       disabled={disabled}
       onClick={() => {
-        disabled ? null : onClick;
+        onClick && onClick();
+        // console.log("onClick");
+        
+        // disabled ? null : onClick;
       }}
       {...rest}
     >
