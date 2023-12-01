@@ -5,9 +5,11 @@ interface ModalProps {
   isOpen: boolean;
   onClose: () => void;
   children: ReactNode;
+  footer: ReactNode;
 }
 
-const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
+const Modal: FC<ModalProps> = ({ isOpen, onClose, children,footer }) => {
+
   if (!isOpen) {
     return null;
   }
@@ -44,7 +46,8 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
               </div>
             </div>
           </div>
-          <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
+          {
+            footer ? footer : <div className="bg-gray-50 px-4 py-3 sm:px-6 sm:flex sm:flex-row-reverse">
             <Button
               onClick={onClose}
               type="primary"
@@ -52,6 +55,8 @@ const Modal: FC<ModalProps> = ({ isOpen, onClose, children }) => {
               Close
             </Button>
           </div>
+          }
+          
         </div>
       </div>
     </div>
